@@ -4327,9 +4327,9 @@ aside .instafeed-grid.gutter-double-extra-large { margin-left: -20px; margin-rig
 .process-step-style-01 .process-step-icon-box { position: relative; }
 .process-step-style-01 .process-step-icon-box .process-step-bfr { position: absolute; top: 50%; left: calc(100% + 15px); transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); }
 .process-step-style-01:last-child .process-step-bfr { display: none; }
-.process-step-style-01 .process-step-icon { width: 130px; height: 130px; box-shadow: 0 0 10px rgba(0,0,0,.07); line-height: 130px; border-radius: 100%; text-align: center; display: inline-block; vertical-align: middle; transition-duration: 0.5s; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -ms-transition-duration: 0.5s; }
+.process-step-style-01 .process-step-icon { width: 130px; height: 130px; box-shadow: 0 0 10px rgba(0,0,0,.07); line-height: 130px; text-align: center; display: inline-block; vertical-align: middle; transition-duration: 0.5s; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -ms-transition-duration: 0.5s; }
 .process-step-style-01 .process-step-icon i { vertical-align: middle; }
-.process-step-style-01:hover .process-step-icon {transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,.11); transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; }
+.process-step-style-01:hover .process-step-icon {box-shadow: 0 8px 25px rgba(0,0,0,.11); transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; }
 
 /* process step style 02 */
 .process-step-style-02 { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
