@@ -4488,13 +4488,11 @@ aside .instafeed-grid.gutter-double-extra-large { margin-left: -20px; margin-rig
 /* image back offset shadow */
 .image-back-offset-shadow { z-index: 1; opacity: 0; margin: 0; position: relative; display: inline-block; -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
 .image-back-offset-shadow.active { opacity: 1; }
-.image-back-offset-shadow img { -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
-.image-back-offset-shadow.active img { -webkit-transform: translate(12px, -12px); transform: translate(15px, -15px); }
+.image-back-offset-shadow img, .image-back-offset-shadow svg { -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
 .image-back-offset-shadow .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
 .image-back-offset-shadow.active .overlay { -webkit-transform: translate(-9px, 9px); transform: translate(-9px, 9px); }
-.image-back-offset-shadow.position-right.active img { -webkit-transform: translate(10px, -20px); transform: translate(10px, -20px); }
 .image-back-offset-shadow.position-right .overlay { -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
-.image-back-offset-shadow.position-right.active .overlay { -webkit-transform: translate(35px, 5px); transform: translate(35px, 5px); }
+.image-back-offset-shadow.position-right.active .overlay { -webkit-transform: translate(35px, 25px); transform: translate(35px, 25px); }
 
 /* ===================================
     26. Footer
