@@ -1,4 +1,4 @@
-const { src, dest, parallel } = require("gulp");
+const { src, dest, watch, parallel } = require("gulp");
 const nunjucksRender = require("gulp-nunjucks-render");
 
 function copyAssets() {
@@ -11,4 +11,10 @@ function renderTemplates() {
     .pipe(dest("public"));
 }
 
+function start() {
+  watch("src/**/*.html", renderTemplates);
+  watch("src/assets/**/*", copyAssets);
+}
+
+exports.start = start;
 exports.default = parallel(copyAssets, renderTemplates);
