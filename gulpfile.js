@@ -1,13 +1,24 @@
-const { src, dest, watch, parallel } = require("gulp");
+const { src, dest, watch, parallel, series } = require("gulp");
+const del = require("del");
 const nunjucksRender = require("gulp-nunjucks-render");
 const data = require("gulp-data");
+const server = require("browser-sync").create();
 
 function getDataForTemplates() {
   return {
     phone: "+7 (4012) 99-44-96",
     email: "info@nwtex.ru",
-    zipCode: "238151"
+    zipCode: "238151",
   };
+}
+
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function clean() {
+  return del("public");
 }
 
 function copyAssets() {
@@ -21,10 +32,18 @@ function renderTemplates() {
     .pipe(dest("public"));
 }
 
-function start() {
-  watch("src/**/*.html", renderTemplates);
-  watch("src/assets/**/*", copyAssets);
+function start(done) {
+  watch("src/**/*.html", series(renderTemplates, reload));
+  watch("src/assets/**/*", series(copyAssets, reload));
+
+  server.init({
+    server: {
+      baseDir: "./public",
+    },
+  });
+
+  done();
 }
 
-exports.start = start;
-exports.default = parallel(copyAssets, renderTemplates);
+exports.start = series(clean, copyAssets, renderTemplates, start);
+exports.default = series(clean, copyAssets, renderTemplates);
